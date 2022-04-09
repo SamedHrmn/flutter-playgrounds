@@ -1,3 +1,4 @@
+import 'package:custom_widgets/buttons_view.dart';
 import 'package:custom_widgets/listwheel_view.dart';
 import 'package:flutter/material.dart';
 
@@ -23,14 +24,25 @@ class HomeView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-              child: Center(
-            child: ElevatedButton(
-              child: Text("ListWheel Picker"),
-              onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => ListWheelView(),
-              )),
+            child: Center(
+              child: ElevatedButton(
+                child: Text("ListWheel Picker"),
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ListWheelView(),
+                )),
+              ),
             ),
-          )),
+          ),
+          Flexible(
+            child: Center(
+              child: ElevatedButton(
+                child: Text("Neumorphism Button"),
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => ButtonsView(),
+                )),
+              ),
+            ),
+          ),
         ],
       ),
     );
