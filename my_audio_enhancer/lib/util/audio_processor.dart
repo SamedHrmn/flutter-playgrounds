@@ -23,60 +23,51 @@ class AudioProcessor {
 
     for (var entry in settings.settings.entries) {
       final type = entry.key;
-      final effectSetting = entry.value;
+
       final value = settings.getEffectValue(type);
 
       switch (type) {
         case EffectTypes.noiseReduction:
-          if (value != effectSetting.defaultValue) {
-            effects.add('afftdn=nf=$value');
-          }
+          effects.add('afftdn=nf=$value');
+
           break;
         case EffectTypes.echoDelay:
-          if (value > effectSetting.minValue) {
-            effects.add('aecho=0.8:0.88:$value:${settings.getEffectValue(EffectTypes.echoDecay)}');
-          }
+          effects.add('aecho=0.8:0.88:$value:${settings.getEffectValue(EffectTypes.echoDecay)}');
+
           break;
         case EffectTypes.echoDecay:
           break;
         case EffectTypes.bassGain:
-          if (value != effectSetting.defaultValue) {
-            effects.add('bass=g=$value');
-          }
+          effects.add('bass=g=$value');
+
           break;
         case EffectTypes.trebleGain:
-          if (value != effectSetting.defaultValue) {
-            effects.add('treble=g=$value');
-          }
+          effects.add('treble=g=$value');
+
           break;
         case EffectTypes.volume:
-          if (value != effectSetting.defaultValue) {
-            effects.add('volume=$value');
-          }
+          effects.add('volume=$value');
+
           break;
         case EffectTypes.reverb:
-          if (value > effectSetting.minValue) {
-            effects.add('areverb=reverberance=$value');
-          }
+          effects.add('areverb=reverberance=$value');
+
           break;
         case EffectTypes.compressorThreshold:
-          if (value != effectSetting.defaultValue) {
-            effects.add('acompressor=threshold=$value:ratio=${settings.getEffectValue(EffectTypes.compressorRatio)}:attack=200:release=1000');
-          }
+          effects.add('acompressor=threshold=$value:ratio=${settings.getEffectValue(EffectTypes.compressorRatio)}:attack=200:release=1000');
+
           break;
         case EffectTypes.compressorRatio:
           break;
         case EffectTypes.chorusInGain:
-          if (value > effectSetting.minValue) {
-            effects.add('chorus=in_gain=$value:out_gain=${settings.getEffectValue(EffectTypes.chorusOutGain)}:delays=50:decays=0.4:speeds=0.25:depths=2');
-          }
+          effects.add('chorus=in_gain=$value:out_gain=${settings.getEffectValue(EffectTypes.chorusOutGain)}:delays=50:decays=0.4:speeds=0.25:depths=2');
+
           break;
         case EffectTypes.chorusOutGain:
           break;
         case EffectTypes.equalizerGain:
-          if (value != effectSetting.defaultValue) {
-            effects.add('equalizer=f=1000:t=q:w=1:g=$value');
-          }
+          effects.add('equalizer=f=1000:t=q:w=1:g=$value');
+
           break;
         default:
           break;

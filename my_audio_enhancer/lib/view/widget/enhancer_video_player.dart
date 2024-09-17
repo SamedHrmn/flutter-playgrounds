@@ -44,16 +44,10 @@ class _EnhancerVideoPlayerState extends State<EnhancerVideoPlayer> {
   }
 
   @override
-  void didUpdateWidget(covariant EnhancerVideoPlayer oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    controller?.dispose().then((_) {
-      _initializeController();
-    });
-  }
-
-  @override
   void dispose() {
-    controller?.dispose();
+    if (mounted) {
+      controller?.dispose();
+    }
     super.dispose();
   }
 

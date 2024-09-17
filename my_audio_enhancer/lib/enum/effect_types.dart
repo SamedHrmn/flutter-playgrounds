@@ -10,6 +10,7 @@ enum EffectTypes {
   compressorRatio("Compressor Ratio"),
   chorusInGain("Chorus In Gain"),
   chorusOutGain("Chorus Out Gain"),
+  stereoWiden("Stereo Widen"),
   equalizerGain("Equalizer Gain");
 
   final String name;

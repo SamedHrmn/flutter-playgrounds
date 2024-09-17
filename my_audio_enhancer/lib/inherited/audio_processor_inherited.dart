@@ -192,7 +192,7 @@ class VideoPlayerViewProviderState extends State<VideoPlayerViewProvider> {
     final isSuccessOperation = await AudioProcessor.applyAudioEffects(
       inputPath: originalVideoOutputPath!,
       outputPath: effectedPath,
-      settings: effectPresets.first.settings,
+      settings: selectedEffectPreset.settings,
     );
 
     if (isSuccessOperation) {

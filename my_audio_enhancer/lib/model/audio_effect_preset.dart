@@ -32,41 +32,6 @@ class AudioEffectPreset {
       }),
     ),
     AudioEffectPreset(
-      name: 'Vocal Boost',
-      settings: AudioEffectSettings(settings: {
-        EffectTypes.noiseReduction: EffectSetting(defaultValue: -20, minValue: -50, maxValue: 0),
-        EffectTypes.echoDelay: EffectSetting(defaultValue: 80, minValue: 0, maxValue: 200),
-        EffectTypes.echoDecay: EffectSetting(defaultValue: 0.3, minValue: 0, maxValue: 1),
-        EffectTypes.bassGain: EffectSetting(defaultValue: 4, minValue: 0, maxValue: 10),
-        EffectTypes.trebleGain: EffectSetting(defaultValue: 8, minValue: 0, maxValue: 10),
-        EffectTypes.volume: EffectSetting(defaultValue: 3, minValue: 0, maxValue: 5),
-        EffectTypes.reverb: EffectSetting(defaultValue: 50, minValue: 0, maxValue: 100),
-      }),
-    ),
-    AudioEffectPreset(
-      name: 'Concert Hall',
-      settings: AudioEffectSettings(settings: {
-        EffectTypes.noiseReduction: EffectSetting(defaultValue: -15, minValue: -50, maxValue: 0),
-        EffectTypes.echoDelay: EffectSetting(defaultValue: 120, minValue: 0, maxValue: 200),
-        EffectTypes.echoDecay: EffectSetting(defaultValue: 0.7, minValue: 0, maxValue: 1),
-        EffectTypes.bassGain: EffectSetting(defaultValue: 6, minValue: 0, maxValue: 10),
-        EffectTypes.trebleGain: EffectSetting(defaultValue: 6, minValue: 0, maxValue: 10),
-        EffectTypes.volume: EffectSetting(defaultValue: 2.5, minValue: 0, maxValue: 5),
-        EffectTypes.reverb: EffectSetting(defaultValue: 80, minValue: 0, maxValue: 100),
-      }),
-    ),
-    AudioEffectPreset(
-      name: 'Soft Compression',
-      settings: AudioEffectSettings(settings: {
-        EffectTypes.noiseReduction: EffectSetting(defaultValue: -18, minValue: -50, maxValue: 0),
-        EffectTypes.compressorThreshold: EffectSetting(defaultValue: -30, minValue: -50, maxValue: 0),
-        EffectTypes.compressorRatio: EffectSetting(defaultValue: 4, minValue: 1, maxValue: 20),
-        EffectTypes.bassGain: EffectSetting(defaultValue: 3, minValue: 0, maxValue: 10),
-        EffectTypes.trebleGain: EffectSetting(defaultValue: 4, minValue: 0, maxValue: 10),
-        EffectTypes.volume: EffectSetting(defaultValue: 2, minValue: 0, maxValue: 5),
-      }),
-    ),
-    AudioEffectPreset(
       name: 'Dynamic Chorus',
       settings: AudioEffectSettings(settings: {
         EffectTypes.noiseReduction: EffectSetting(defaultValue: -22, minValue: -50, maxValue: 0),
