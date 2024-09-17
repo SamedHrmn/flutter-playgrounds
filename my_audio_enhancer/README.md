@@ -1,16 +1,4 @@
-# my_audio_enhancer
+# My Audio Enhancer
+My Audio Enhancer Flutter is a project I prepared with ffmpeg_kit_flutter, where you can add some sound effects to videos selected from the gallery and play them.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/user-attachments/assets/b7fedd12-ee16-431e-b8b6-147df8e26887" width="250">
