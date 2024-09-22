@@ -1,0 +1,26 @@
+2024-09-22 16:29:51,100 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.35:8080
+2024-09-22 16:29:51,102 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-22 16:39:33,660 - INFO - 127.0.0.1 - - [22/Sep/2024 16:39:33] "POST /enhanceImage HTTP/1.1" 200 -
+2024-09-22 16:49:23,453 - INFO - 127.0.0.1 - - [22/Sep/2024 16:49:23] "POST /enhanceImage HTTP/1.1" 200 -
+2024-09-22 16:50:29,172 - INFO - 127.0.0.1 - - [22/Sep/2024 16:50:29] "POST /enhanceImage HTTP/1.1" 200 -
+2024-09-22 16:51:02,552 - INFO - 127.0.0.1 - - [22/Sep/2024 16:51:02] "POST /enhanceImage HTTP/1.1" 200 -
+2024-09-22 17:05:23,625 - INFO - 127.0.0.1 - - [22/Sep/2024 17:05:23] "POST /enhanceImage HTTP/1.1" 200 -
+2024-09-22 17:05:38,869 - DEBUG - STREAM b'IHDR' 16 13
+2024-09-22 17:05:38,871 - DEBUG - STREAM b'sRGB' 41 1
+2024-09-22 17:05:38,871 - DEBUG - STREAM b'gAMA' 54 4
+2024-09-22 17:05:38,871 - DEBUG - STREAM b'pHYs' 70 9
+2024-09-22 17:05:38,871 - DEBUG - STREAM b'IDAT' 91 65445
+2024-09-22 17:05:59,860 - DEBUG - STREAM b'IHDR' 16 13
+2024-09-22 17:05:59,860 - DEBUG - STREAM b'sRGB' 41 1
+2024-09-22 17:05:59,860 - DEBUG - STREAM b'gAMA' 54 4
+2024-09-22 17:05:59,860 - DEBUG - STREAM b'pHYs' 70 9
+2024-09-22 17:05:59,860 - DEBUG - STREAM b'IDAT' 91 65445
+2024-09-22 17:05:59,999 - INFO - 127.0.0.1 - - [22/Sep/2024 17:05:59] "POST /enhanceImage HTTP/1.1" 200 -
+2024-09-22 17:13:38,479 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.35:8080
+2024-09-22 17:13:38,479 - INFO - [33mPress CTRL+C to quit[0m
