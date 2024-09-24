@@ -1,0 +1,13 @@
+{
+    "auth": {
+        "signUpForTiktok": "Sign up for TikTok",
+        "authTopText": "Create a profile, follow other accounts, make your own videos, and more.",
+        "signUpEmailOrPhoneButtonText": "Use phone or email",
+        "signUpFacebookButtonText": "Continue with Facebook",
+        "signUpAppleButtonText": "Continue with Apple",
+        "signUpGoogleButtonText": "Continue with Google",
+        "signUpXButtonText": "Continue with X",
+        "signUpTermOfServiceText": "By continuing, you agree to our <b>Terms of Service</b> and acknowledge that you have read our <b> Privacy Policy</b> to learn how we collect, use and share your data and our <b> Cookies Policy</br> to learn how we use cookies",
+        "signUpAlreadyHaveAnAccount": "Already have an account? <b>Log in</br>"
+    }
+}
