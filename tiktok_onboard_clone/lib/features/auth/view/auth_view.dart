@@ -8,17 +8,23 @@ import 'package:tiktok_onboard_clone/core/components/text/app_text.dart';
 import 'package:tiktok_onboard_clone/core/constant/asset_constants.dart';
 import 'package:tiktok_onboard_clone/core/constant/color_constants.dart';
 import 'package:tiktok_onboard_clone/core/enum/localization_keys.dart';
+import 'package:tiktok_onboard_clone/core/enum/route_enum.dart';
+import 'package:tiktok_onboard_clone/core/navigation/app_navigation_manager.dart';
 import 'package:tiktok_onboard_clone/core/util/app_sizer.dart';
 import 'package:tiktok_onboard_clone/features/auth/widget/auth_button.dart';
+import 'package:tiktok_onboard_clone/locator.dart';
 
 class AuthView extends StatelessWidget {
   const AuthView({super.key});
+
+  void routeToAuthOnboardView() {
+    getIt<AppNavigationManager>().navigateTo(RouteEnum.authOnboard);
+  }
 
   @override
   Widget build(BuildContext context) {
     return AppScaffold(
       canPop: false,
-      scaffoldBackgroundColor: ColorConstants.background,
       body: SafeArea(
         bottom: false,
         child: Center(
@@ -88,6 +94,7 @@ class AuthView extends StatelessWidget {
         AuthButton.icon(
           text: LocalizationKeys.signUpEmailOrPhoneButtonText.name.tr(context: context),
           iconData: Icons.person,
+          onPressed: () async => routeToAuthOnboardView(),
         ),
         const EmptyBox(height: 12),
         AuthButton.image(

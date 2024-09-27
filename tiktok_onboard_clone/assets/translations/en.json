@@ -8,6 +8,33 @@
         "signUpGoogleButtonText": "Continue with Google",
         "signUpXButtonText": "Continue with X",
         "signUpTermOfServiceText": "By continuing, you agree to our <b>Terms of Service</b> and acknowledge that you have read our <b> Privacy Policy</b> to learn how we collect, use and share your data and our <b> Cookies Policy</br> to learn how we use cookies",
-        "signUpAlreadyHaveAnAccount": "Already have an account? <b>Log in</br>"
-    }
+        "signUpAlreadyHaveAnAccount": "Already have an account? <b>Log in</br>",
+        "signUpPhoneNumberHintText": "Phone number",
+        "signUpPhoneFieldBottomText": "Your phone number will be used to improve your TikTok experience, including connecting you with people you may know personalizing your ads experience and more, if you sign up with SMS. SMS fees may apply. <b>Learn more</b>",
+        "signUpPhoneFieldSendCode": "Send Code",
+        "signUpEmailHintText": "Email",
+        "signUpTermOfServiceText2": "By continuing, you agree to TikTok's <b>Terms of Service</b> and confirm that you have read TikTok's <b>Privacy Policy</b>.",
+        "signUpEmailNotificationText": "Get trending content, newsletters, promotions, recommendations and account updates sent to your email",
+        "signUpCaptchaDialogTitle": "Verify to continue:",
+        "signUpCaptchaDialogSliderText": "Drag to puzzle piece into place",
+        "signUpCreatePassword": "Create Password",
+        "signUpCreatePasswordHintText": "Enter password",
+        "signUpCreatePasswordHaveMustText": "Your password must have at least:",
+        "signUpCreatePasswordValidatingText1": "8 characters (20 max)",
+        "signUpCreatePasswordValidatingText2": "1 letter and 1 number",
+        "signUpCreatePasswordValidatingText3": "1 special character (Example: ! ? & &)",
+        "signUpBirthdayTitle": "When's your birthday?",
+        "signUpBirthdayWontBeShownPublicly": "Your birthday won't be shown publicly",
+        "signUpBirthdayHintText": "Birthday",
+        "signUpPhoneTabText": "Phone",
+        "signUpEmailTabText": "Email",
+        "signUpAppBarTitle": "Sign up"
+    },
+    "error": {
+        "phoneFieldEmpty": "Please fill up phone number.",
+        "phoneFieldInvalid": "Please enter valid phone number.",
+        "emailFieldEmpty": "Please fill up email adress.",
+        "emailFieldInvalid": "Please enter valid email adress"
+    },
+    "nextButtonText": "Next"
 }

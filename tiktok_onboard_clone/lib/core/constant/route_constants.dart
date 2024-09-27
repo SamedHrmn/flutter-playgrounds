@@ -3,5 +3,5 @@ final class RouteConstants {
 
   static const String initialPath = '/';
   static const String authViewPath = '/auth';
-  static const String onboardViewPath = '/onboard';
+  static const String authOnboardViewPath = '/authOnboard';
 }

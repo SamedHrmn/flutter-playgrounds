@@ -25,6 +25,8 @@ linter:
       public_member_api_docs: false
       lines_longer_than_80_chars: false
       avoid_positional_boolean_parameters: false
+      library_private_types_in_public_api: false
+      use_setters_to_change_properties: false
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

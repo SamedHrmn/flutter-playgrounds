@@ -8,8 +8,8 @@ import 'package:tiktok_onboard_clone/core/theme/app_theme.dart';
 import 'package:tiktok_onboard_clone/core/util/app_initializer.dart';
 
 import 'package:tiktok_onboard_clone/core/util/app_sizer.dart';
-import 'package:tiktok_onboard_clone/features/auth/auth_view.dart';
-import 'package:tiktok_onboard_clone/features/onboard/onboard_view.dart';
+import 'package:tiktok_onboard_clone/features/auth/view/auth_onboard_view.dart';
+import 'package:tiktok_onboard_clone/features/auth/view/auth_view.dart';
 import 'package:tiktok_onboard_clone/locator.dart';
 
 Future<void> main() async {
@@ -60,10 +60,10 @@ class MyApp extends StatelessWidget {
               builder: (context) => const AuthView(),
               settings: const RouteSettings(name: RouteConstants.authViewPath),
             );
-          case RouteConstants.onboardViewPath:
+          case RouteConstants.authOnboardViewPath:
             return MaterialPageRoute(
-              builder: (context) => const OnboardView(),
-              settings: const RouteSettings(name: RouteConstants.onboardViewPath),
+              builder: (context) => const AuthOnboardView(),
+              settings: const RouteSettings(name: RouteConstants.authOnboardViewPath),
             );
           default:
             return null;

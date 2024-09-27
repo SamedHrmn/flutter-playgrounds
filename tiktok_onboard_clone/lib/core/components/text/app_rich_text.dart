@@ -5,8 +5,8 @@ import 'package:tiktok_onboard_clone/core/util/app_sizer.dart';
 
 class AppRichText extends StatelessWidget {
   const AppRichText({
-    super.key,
     required this.text,
+    super.key,
     this.defaultStyle,
     this.tags,
     this.textAlign = TextAlign.center,
