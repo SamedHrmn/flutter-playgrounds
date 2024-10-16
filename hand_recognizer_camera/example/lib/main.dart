@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hand_recognizer_camera_example/drawing_canvas.dart';
 import 'hand_landmarks_painter.dart';
 import 'preview_view_manager.dart';
 
@@ -27,6 +28,12 @@ class _PreviewViewState extends State<PreviewView> with PreviewViewManager {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.clear),
+        onPressed: () {
+          drawingKey.currentState!.clearDrawing();
+        },
+      ),
       body: SafeArea(
         child: Center(
           child: hasCameraPermission ? _cameraPreviewView() : _noPermissionView(),
@@ -53,6 +60,10 @@ class _PreviewViewState extends State<PreviewView> with PreviewViewManager {
                         scaleFactorX: scaleFactorX,
                         scaleFactorY: scaleFactorY,
                       ),
+                    ),
+                    DrawingCanvas(
+                      key: drawingKey,
+                      resultBundle: resultBundle!,
                     ),
                     Positioned(
                       top: 16.0,

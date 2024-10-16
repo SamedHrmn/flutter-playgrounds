@@ -3,6 +3,7 @@ import 'package:hand_recognizer_camera/hand_recognizer_camera.dart';
 import 'package:hand_recognizer_camera/result_bundle.dart';
 import 'package:hand_recognizer_camera_example/main.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'drawing_canvas.dart';
 
 mixin PreviewViewManager on State<PreviewView> {
   bool hasCameraPermission = false;
@@ -11,6 +12,7 @@ mixin PreviewViewManager on State<PreviewView> {
   double scaleFactorX = 1;
   double scaleFactorY = 1;
   late final HandRecognizerCamera handRecognizerCamera;
+  final GlobalKey<DrawingCanvasState> drawingKey = GlobalKey<DrawingCanvasState>();
 
   @override
   void initState() {

@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class ResultBundle {
   final List<HandLandmarkerResult> results;
   final int inferenceTime;
@@ -32,6 +34,18 @@ class ResultBundle {
       'inputImageWidth': inputImageWidth,
     };
   }
+
+  @override
+  bool operator ==(covariant ResultBundle other) {
+    if (identical(this, other)) return true;
+
+    return listEquals(other.results, results) && other.inferenceTime == inferenceTime && other.inputImageHeight == inputImageHeight && other.inputImageWidth == inputImageWidth;
+  }
+
+  @override
+  int get hashCode {
+    return results.hashCode ^ inferenceTime.hashCode ^ inputImageHeight.hashCode ^ inputImageWidth.hashCode;
+  }
 }
 
 class HandLandmarkerResult {
@@ -56,6 +70,16 @@ class HandLandmarkerResult {
       'landmarks': landmarks.map((landmark) => landmark.toMap()).toList(),
     };
   }
+
+  @override
+  bool operator ==(covariant HandLandmarkerResult other) {
+    if (identical(this, other)) return true;
+
+    return listEquals(other.landmarks, landmarks);
+  }
+
+  @override
+  int get hashCode => landmarks.hashCode;
 }
 
 class Landmark {
@@ -84,4 +108,14 @@ class Landmark {
       'z': z,
     };
   }
+
+  @override
+  bool operator ==(covariant Landmark other) {
+    if (identical(this, other)) return true;
+
+    return other.x == x && other.y == y && other.z == z;
+  }
+
+  @override
+  int get hashCode => x.hashCode ^ y.hashCode ^ z.hashCode;
 }
