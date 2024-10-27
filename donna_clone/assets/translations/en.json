@@ -1,0 +1,51 @@
+{
+    "pro": "PRO",
+    "songDescription": "Song Description",
+    "lyrics": "Lyrics",
+    "describeSong": "Describe the Song",
+    "describeSongBottom": "Describe the music and topic you want (e.g: make a chill song for my biggest regret)",
+    "getInspired": "Get Inspired",
+    "enterLyrics": "Enter Lyrics",
+    "selectMood": "Select Mood",
+    "optional": "optional",
+    "selectGenre": "Select Genre",
+    "createWithDescription": "Create with Description",
+    "createWithLyrics": "Create with Lyrics",
+    "explorePopular": "Popular",
+    "exploreNew": "New",
+    "explorePopularWeekly": "Weekly",
+    "explorePopularMonthly": "Monthly",
+    "explorePopularAllTime": "All Time",
+    "libraryTitle1": "Get ready to create your",
+    "libraryTitle2": "first song!",
+    "libraryButtonText": "Start Creating",
+    "errorLoadingXSongs": "Error loading {} songs",
+    "advancedOptions": {
+        "title": "Advanced Options",
+        "songName": "Song Name",
+        "songNameHint": "Type here",
+        "vocal": "Vocal",
+        "vocalGender": "Vocal Gender",
+        "recording": "Recording"
+    },
+    "genre": {
+        "random": "Random Genre",
+        "blues": "Blues",
+        "funk": "Funk",
+        "rap": "Rap",
+        "pop": "Pop",
+        "classical": "Classical",
+        "jazz": "Jazz",
+        "more": "More"
+    },
+    "mood": {
+        "happy": "Happy",
+        "confident": "Confident",
+        "motivational": "Motivational"
+    },
+    "navbar": {
+        "create": "Create",
+        "explore": "Explore",
+        "library": "Library"
+    }
+}
