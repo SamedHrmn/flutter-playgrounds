@@ -1,0 +1,238 @@
+2024-11-06 15:51:00,157 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 15:51:00,157 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 15:59:51,005 - ERROR - Exception on /upscaleImage [POST]
+Traceback (most recent call last):
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 28, in upscale_image
+    saved_input_image_path = save_input_image(input_image)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 41, in save_input_image
+    with open(input_image_path, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\samed\\Works\\flutter-playgrounds\\srgan_tflite\\srgan_api\\assets\\input.jpg'
+2024-11-06 15:59:51,011 - INFO - 127.0.0.1 - - [06/Nov/2024 15:59:51] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:00:21,828 - ERROR - Exception on /upscaleImage [POST]
+Traceback (most recent call last):
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 28, in upscale_image
+    saved_input_image_path = save_input_image(input_image)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 41, in save_input_image
+    with open(input_image_path, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\samed\\Works\\flutter-playgrounds\\srgan_tflite\\srgan_api\\assets\\input.jpg'
+2024-11-06 16:00:21,829 - INFO - 127.0.0.1 - - [06/Nov/2024 16:00:21] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:06:14,023 - ERROR - Exception on /upscaleImage [POST]
+Traceback (most recent call last):
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 28, in upscale_image
+    saved_input_image_path = save_input_image(input_image)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 41, in save_input_image
+    with open(input_image_path, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\samed\\Works\\flutter-playgrounds\\srgan_tflite\\srgan_api\\assets\\input.jpg'
+2024-11-06 16:06:14,024 - INFO - 127.0.0.1 - - [06/Nov/2024 16:06:14] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:09:37,362 - ERROR - Exception on /upscaleImage [POST]
+Traceback (most recent call last):
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 28, in upscale_image
+    saved_input_image_path = save_input_image(input_image)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 41, in save_input_image
+    with open(input_image_path, 'wb') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\samed\\Works\\flutter-playgrounds\\srgan_tflite\\srgan_api\\assets\\input.jpg'
+2024-11-06 16:09:37,363 - INFO - 127.0.0.1 - - [06/Nov/2024 16:09:37] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:11:54,480 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:11:54,480 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:13:52,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:13:52,612 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:14:00,278 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:14:00,278 - DEBUG - STREAM b'IDAT' 41 27018
+2024-11-06 16:14:01,649 - INFO - 127.0.0.1 - - [06/Nov/2024 16:14:01] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 16:16:04,932 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:16:04,932 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:16:11,492 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:16:11,492 - DEBUG - STREAM b'IDAT' 41 27018
+2024-11-06 16:16:12,555 - INFO - 127.0.0.1 - - [06/Nov/2024 16:16:12] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 16:17:12,962 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:17:12,963 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:17:15,144 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:17:15,144 - DEBUG - STREAM b'IDAT' 41 27018
+2024-11-06 16:17:16,157 - INFO - 127.0.0.1 - - [06/Nov/2024 16:17:16] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 16:20:17,368 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:20:17,368 - DEBUG - STREAM b'IDAT' 41 27018
+2024-11-06 16:20:18,369 - INFO - 127.0.0.1 - - [06/Nov/2024 16:20:18] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 16:23:16,463 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:23:16,463 - DEBUG - STREAM b'sRGB' 41 1
+2024-11-06 16:23:16,463 - DEBUG - STREAM b'gAMA' 54 4
+2024-11-06 16:23:16,463 - DEBUG - STREAM b'pHYs' 70 9
+2024-11-06 16:23:16,463 - DEBUG - STREAM b'IDAT' 91 65445
+2024-11-06 16:23:16,466 - ERROR - Exception on /upscaleImage [POST]
+Traceback (most recent call last):
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\main.py", line 29, in upscale_image
+    im = preprocess_image(saved_input_image_path)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\utils.py", line 10, in preprocess_image
+    processed_image = np.reshape(processed_image, (1, processed_image.shape[1], processed_image.shape[2], 3))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\numpy\_core\fromnumeric.py", line 299, in reshape
+    return _wrapfunc(a, 'reshape', newshape, order=order)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\numpy\_core\fromnumeric.py", line 54, in _wrapfunc
+    return _wrapit(obj, method, *args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samed\Works\flutter-playgrounds\srgan_tflite\srgan_api\.venv\Lib\site-packages\numpy\_core\fromnumeric.py", line 46, in _wrapit
+    result = getattr(arr, method)(*args, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 436128 into shape (1,264,413,3)
+2024-11-06 16:23:16,470 - INFO - 127.0.0.1 - - [06/Nov/2024 16:23:16] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:24:20,576 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:24:20,577 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:24:20,579 - INFO -  * Restarting with stat
+2024-11-06 16:24:22,996 - WARNING -  * Debugger is active!
+2024-11-06 16:24:23,000 - INFO -  * Debugger PIN: 479-493-999
+2024-11-06 16:24:28,959 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:24:28,959 - DEBUG - STREAM b'sRGB' 41 1
+2024-11-06 16:24:28,959 - DEBUG - STREAM b'gAMA' 54 4
+2024-11-06 16:24:28,959 - DEBUG - STREAM b'pHYs' 70 9
+2024-11-06 16:24:28,959 - DEBUG - STREAM b'IDAT' 91 65445
+2024-11-06 16:24:29,002 - INFO - 127.0.0.1 - - [06/Nov/2024 16:24:29] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:29:07,777 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:29:07,777 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:29:07,778 - INFO -  * Restarting with stat
+2024-11-06 16:29:10,312 - WARNING -  * Debugger is active!
+2024-11-06 16:29:10,316 - INFO -  * Debugger PIN: 479-493-999
+2024-11-06 16:29:12,091 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:29:12,091 - DEBUG - STREAM b'sRGB' 41 1
+2024-11-06 16:29:12,091 - DEBUG - STREAM b'gAMA' 54 4
+2024-11-06 16:29:12,091 - DEBUG - STREAM b'pHYs' 70 9
+2024-11-06 16:29:12,091 - DEBUG - STREAM b'IDAT' 91 65445
+2024-11-06 16:29:12,120 - INFO - 127.0.0.1 - - [06/Nov/2024 16:29:12] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:30:24,055 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:30:24,055 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:30:24,056 - INFO -  * Restarting with stat
+2024-11-06 16:30:26,556 - WARNING -  * Debugger is active!
+2024-11-06 16:30:26,559 - INFO -  * Debugger PIN: 479-493-999
+2024-11-06 16:30:28,109 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:30:28,109 - DEBUG - STREAM b'sRGB' 41 1
+2024-11-06 16:30:28,109 - DEBUG - STREAM b'gAMA' 54 4
+2024-11-06 16:30:28,109 - DEBUG - STREAM b'pHYs' 70 9
+2024-11-06 16:30:28,109 - DEBUG - STREAM b'IDAT' 91 65445
+2024-11-06 16:30:28,141 - INFO - 127.0.0.1 - - [06/Nov/2024 16:30:28] "[35m[1mPOST /upscaleImage HTTP/1.1[0m" 500 -
+2024-11-06 16:32:52,545 - INFO - 127.0.0.1 - - [06/Nov/2024 16:32:52] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 16:33:14,977 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:33:14,978 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 16:33:16,077 - INFO - 127.0.0.1 - - [06/Nov/2024 16:33:16] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 16:33:58,762 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 16:33:58,763 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 16:34:02,897 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 16:34:02,897 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 16:34:03,971 - INFO - 127.0.0.1 - - [06/Nov/2024 16:34:03] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 17:06:35,792 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.23:8080
+2024-11-06 17:06:35,793 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-06 17:06:42,294 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 17:06:42,294 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 17:06:43,384 - INFO - 127.0.0.1 - - [06/Nov/2024 17:06:43] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 17:06:59,593 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 17:06:59,594 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 17:07:10,206 - INFO - 127.0.0.1 - - [06/Nov/2024 17:07:10] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 17:07:21,990 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 17:07:21,990 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 17:07:22,992 - INFO - 127.0.0.1 - - [06/Nov/2024 17:07:22] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 17:08:22,116 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 17:08:22,116 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 17:08:23,140 - INFO - 127.0.0.1 - - [06/Nov/2024 17:08:23] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 17:08:30,653 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 17:08:30,653 - DEBUG - STREAM b'IDAT' 41 27018
+2024-11-06 17:08:31,653 - INFO - 127.0.0.1 - - [06/Nov/2024 17:08:31] "POST /upscaleImage HTTP/1.1" 200 -
+2024-11-06 17:08:54,495 - DEBUG - STREAM b'IHDR' 16 13
+2024-11-06 17:08:54,495 - DEBUG - STREAM b'IDAT' 41 34089
+2024-11-06 17:08:55,620 - INFO - 127.0.0.1 - - [06/Nov/2024 17:08:55] "POST /upscaleImage HTTP/1.1" 200 -
