@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomBirthPicker extends StatefulWidget {
-  const CustomBirthPicker({Key? key}) : super(key: key);
+  const CustomBirthPicker({super.key});
 
   @override
   _CustomBirthPickerState createState() => _CustomBirthPickerState();
@@ -13,13 +13,13 @@ class _CustomBirthPickerState extends State<CustomBirthPicker> {
   late int selectedDayIndex;
   List<int> days = List.generate(30, (index) => index + 1);
   List<int> years = List.generate(100, (index) => DateTime.now().year - 100 + index);
-  List<String> months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  List<String> months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   late List<String> selectedDate;
   @override
   void initState() {
     super.initState();
 
-    selectedDate = ["20", months[5], "1999"];
+    selectedDate = ['20', months[5], '1999'];
     selectedDayIndex = int.parse(selectedDate[0]) - 1;
     selectedMonthIndex = months.indexOf(selectedDate[1]);
     selectedYearIndex = years.indexOf(int.parse(selectedDate[2]));
@@ -31,60 +31,67 @@ class _CustomBirthPickerState extends State<CustomBirthPicker> {
       children: [
         const Spacer(),
         Expanded(
-            flex: 3,
-            child: _BirthScrollView(
-              initialIndex: int.parse(selectedDate[0]) - 1,
-              onSelectedItemChanged: (p0) {
-                setState(() {
-                  selectedDayIndex = p0;
-                  selectedDate[0] = days[selectedDayIndex].toString();
-                });
-              },
-              children: days
-                  .map((e) => Center(
-                        child: FittedBox(
-                          child: Text(
-                            e.toString(),
-                            style: days.indexOf(e) == selectedDayIndex
-                                ? Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 28, color: Colors.black.withOpacity(0.8))
-                                : Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 20, color: Colors.black.withOpacity(0.4)),
-                          ),
-                        ),
-                      ))
-                  .toList(),
-            )),
+          flex: 3,
+          child: _BirthScrollView(
+            initialIndex: int.parse(selectedDate[0]) - 1,
+            onSelectedItemChanged: (p0) {
+              setState(() {
+                selectedDayIndex = p0;
+                selectedDate[0] = days[selectedDayIndex].toString();
+              });
+            },
+            children: days
+                .map(
+                  (e) => Center(
+                    child: FittedBox(
+                      child: Text(
+                        e.toString(),
+                        style: days.indexOf(e) == selectedDayIndex
+                            ? Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 28, color: Colors.black.withOpacity(0.8))
+                            : Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 20, color: Colors.black.withOpacity(0.4)),
+                      ),
+                    ),
+                  ),
+                )
+                .toList(),
+          ),
+        ),
         _dividerContainer(),
         Expanded(
           flex: 6,
           child: _BirthScrollView(
             initialIndex: months.indexOf(selectedDate[1]),
             onSelectedItemChanged: (value) {
-              setState(() {
-                selectedMonthIndex = value;
-                selectedDate[1] = months[selectedMonthIndex];
+              setState(
+                () {
+                  selectedMonthIndex = value;
+                  selectedDate[1] = months[selectedMonthIndex];
 
-                if (months.indexWhere((element) => element == months[value]) % 2 == 0) {
-                  days = List.generate(31, (index) => index + 1);
-                } else {
-                  days = List.generate(30, (index) => index + 1);
+                  if (months.indexWhere((element) => element == months[value]).isEven) {
+                    days = List.generate(31, (index) => index + 1);
+                  } else {
+                    days = List.generate(30, (index) => index + 1);
 
-                  if (months.indexWhere((element) => element == months[value]) == 1) {
-                    days = List.generate(29, (index) => index + 1);
+                    if (months.indexWhere((element) => element == months[value]) == 1) {
+                      days = List.generate(29, (index) => index + 1);
+                    }
                   }
-                }
-              });
+                },
+              );
             },
             children: months
-                .map((e) => Center(
-                      child: FittedBox(
-                        child: Text(
-                          e,
-                          style: selectedMonthIndex == months.indexOf(e)
-                              ? Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 28, color: Colors.black.withOpacity(0.8))
-                              : Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 20, color: Colors.black.withOpacity(0.4)),
-                        ),
+                .map(
+                  (e) => Center(
+                    child: FittedBox(
+                      child: Text(
+                        e,
+                        style: selectedMonthIndex == months.indexOf(e)
+                            ? Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 28, color: Colors.black.withOpacity(0.8))
+                            : Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 20, color: Colors.black.withOpacity(0.4)),
                       ),
-                    ))
+                    ),
+                  ),
+                )
                 .toList(),
           ),
         ),
@@ -100,16 +107,18 @@ class _CustomBirthPickerState extends State<CustomBirthPicker> {
               });
             },
             children: years
-                .map((e) => Center(
-                      child: FittedBox(
-                        child: Text(
-                          e.toString(),
-                          style: selectedYearIndex == years.indexOf(e)
-                              ? Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 28, color: Colors.black.withOpacity(0.8))
-                              : Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 20, color: Colors.black.withOpacity(0.4)),
-                        ),
+                .map(
+                  (e) => Center(
+                    child: FittedBox(
+                      child: Text(
+                        e.toString(),
+                        style: selectedYearIndex == years.indexOf(e)
+                            ? Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 28, color: Colors.black.withOpacity(0.8))
+                            : Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 20, color: Colors.black.withOpacity(0.4)),
                       ),
-                    ))
+                    ),
+                  ),
+                )
                 .toList(),
           ),
         ),
@@ -118,7 +127,7 @@ class _CustomBirthPickerState extends State<CustomBirthPicker> {
     );
   }
 
-  _dividerContainer() {
+  Widget _dividerContainer() {
     return Container(
       height: 60,
       padding: const EdgeInsets.all(5),
@@ -137,13 +146,12 @@ class _CustomBirthPickerState extends State<CustomBirthPicker> {
 
 class _BirthScrollView extends StatefulWidget {
   const _BirthScrollView({
-    Key? key,
     required this.children,
     this.onSelectedItemChanged,
     this.initialIndex,
-  }) : super(key: key);
+  });
   final List<Widget> children;
-  final Function(int)? onSelectedItemChanged;
+  final void Function(int)? onSelectedItemChanged;
   final int? initialIndex;
 
   @override

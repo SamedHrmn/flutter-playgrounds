@@ -2,23 +2,28 @@ import 'package:custom_widgets/buttons_view.dart';
 import 'package:custom_widgets/listwheel_view.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeView());
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeView(),
+    );
   }
 }
 
 class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Material App Bar'),
+        title: const Text('Material App Bar'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,20 +31,24 @@ class HomeView extends StatelessWidget {
           Flexible(
             child: Center(
               child: ElevatedButton(
-                child: Text("ListWheel Picker"),
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ListWheelView(),
-                )),
+                child: const Text('ListWheel Picker'),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ListWheelView(),
+                  ),
+                ),
               ),
             ),
           ),
           Flexible(
             child: Center(
               child: ElevatedButton(
-                child: Text("Neumorphism Button"),
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ButtonsView(),
-                )),
+                child: const Text('Neumorphism Button'),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (context) => const ButtonsView(),
+                  ),
+                ),
               ),
             ),
           ),
