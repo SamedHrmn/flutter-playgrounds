@@ -1,8 +1,8 @@
-import 'package:animations_examples/widget/custom_animated_container.dart';
+import 'package:animations_examples/custom_animated_container/custom_animated_container.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedContainersView extends StatefulWidget {
-  const AnimatedContainersView({Key? key}) : super(key: key);
+  const AnimatedContainersView({super.key});
 
   @override
   _AnimatedContainersViewState createState() => _AnimatedContainersViewState();
@@ -16,7 +16,7 @@ class _AnimatedContainersViewState extends State<AnimatedContainersView> {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       body: Padding(
-        padding: EdgeInsets.fromLTRB(20, 30, 20, 30),
+        padding: const EdgeInsets.fromLTRB(20, 30, 20, 30),
         child: GridView.count(
           crossAxisCount: 2,
           crossAxisSpacing: 20,
@@ -32,7 +32,7 @@ class _AnimatedContainersViewState extends State<AnimatedContainersView> {
     );
   }
 
-  selectableAnimatedContainer({required int position}) {
+  Widget selectableAnimatedContainer({required int position}) {
     return GestureDetector(
       onTap: () {
         setState(() {

@@ -13,7 +13,7 @@ class _ElasticLineViewState extends State<ElasticLineView> with SingleTickerProv
   late AnimationController _controller;
   late Animation<double> _animation;
 
-  final Offset _pointA = Offset(0, 0);
+  final Offset _pointA = Offset.zero;
   late final Offset _pointB;
   Offset _grabPoint = Offset.zero;
   Offset _currentGrabPoint = Offset.zero;
@@ -31,7 +31,7 @@ class _ElasticLineViewState extends State<ElasticLineView> with SingleTickerProv
     );
 
     _animation = _controller.drive(
-      Tween<double>(begin: 0.0, end: 1.0).chain(
+      Tween<double>(begin: 0, end: 1).chain(
         CurveTween(curve: Curves.easeOut),
       ),
     );
@@ -50,20 +50,21 @@ class _ElasticLineViewState extends State<ElasticLineView> with SingleTickerProv
 
   void _startSpringAnimation() {
     _initialGrabPoint = _currentGrabPoint;
-    _controller.reset();
-    _controller.forward();
+    _controller
+      ..reset()
+      ..forward();
   }
 
   bool _isTapNearLine(Offset tapPoint) {
-    final Offset closestPoint = _getClosestPointOnLine(tapPoint);
+    final closestPoint = _getClosestPointOnLine(tapPoint);
     return (closestPoint - tapPoint).distance < _lineTapOffset;
   }
 
   Offset _getClosestPointOnLine(Offset tapPoint) {
-    final Offset lineVector = _pointB - _pointA;
-    final Offset tapVector = tapPoint - _pointA;
+    final lineVector = _pointB - _pointA;
+    final tapVector = tapPoint - _pointA;
 
-    final double projectionFactor = (tapVector.dx * lineVector.dx + tapVector.dy * lineVector.dy) / (lineVector.dx * lineVector.dx + lineVector.dy * lineVector.dy);
+    final projectionFactor = (tapVector.dx * lineVector.dx + tapVector.dy * lineVector.dy) / (lineVector.dx * lineVector.dx + lineVector.dy * lineVector.dy);
 
     return Offset(
       _pointA.dx + lineVector.dx * projectionFactor,
@@ -75,7 +76,7 @@ class _ElasticLineViewState extends State<ElasticLineView> with SingleTickerProv
   Widget build(BuildContext context) {
     return Scaffold(
       body: !_isInitializePoints
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : GestureDetector(
@@ -140,10 +141,10 @@ class ElasticLinePainter extends CustomPainter {
     required this.grabPoint,
     required this.currentGrabPoint,
     required this.initialGrabPoint,
-    this.oscillationFactor = 10,
-    this.dampingFactor = -4,
     required this.animationValue,
     required this.isDragging,
+    this.oscillationFactor = 10,
+    this.dampingFactor = -4,
   });
 
   @override
@@ -153,10 +154,10 @@ class ElasticLinePainter extends CustomPainter {
       ..strokeWidth = 4.0
       ..style = PaintingStyle.stroke;
 
-    final double damping = exp(dampingFactor * animationValue);
-    final double oscillation = sin(animationValue * oscillationFactor * pi);
+    final damping = exp(dampingFactor * animationValue);
+    final oscillation = sin(animationValue * oscillationFactor * pi);
 
-    final Offset animatedGrabPoint = isDragging
+    final animatedGrabPoint = isDragging
         ? currentGrabPoint
         : Offset.lerp(
               initialGrabPoint,
