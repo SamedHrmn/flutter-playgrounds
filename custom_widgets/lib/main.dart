@@ -1,8 +1,11 @@
-import 'package:custom_widgets/buttons_view.dart';
-import 'package:custom_widgets/listwheel_view.dart';
+import 'package:custom_widgets/custom_bar_chart/custom_bar_chart_view.dart';
+import 'package:custom_widgets/custom_birth_picker/custom_birth_picker_view.dart';
+import 'package:custom_widgets/inset_button/inset_button_view.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,32 +26,31 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Material App Bar'),
+        title: const Text('Custom Widgets'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Flexible(
-            child: Center(
-              child: ElevatedButton(
-                child: const Text('ListWheel Picker'),
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (context) => const ListWheelView(),
-                  ),
-                ),
+          ElevatedButton(
+            child: const Text('Custom Birth Picker'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (context) => const CustomBirthPickerView(),
               ),
             ),
           ),
-          Flexible(
-            child: Center(
-              child: ElevatedButton(
-                child: const Text('Neumorphism Button'),
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (context) => const ButtonsView(),
-                  ),
-                ),
+          ElevatedButton(
+            child: const Text('Neumorphism Button'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (context) => const InsetButtonView(),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            child: const Text('Weight Tracker Chart'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (context) => const WeightTrackerView(),
               ),
             ),
           ),
