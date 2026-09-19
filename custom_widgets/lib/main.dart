@@ -1,6 +1,7 @@
 import 'package:custom_widgets/custom_bar_chart/custom_bar_chart_view.dart';
 import 'package:custom_widgets/custom_birth_picker/custom_birth_picker_view.dart';
 import 'package:custom_widgets/inset_button/inset_button_view.dart';
+import 'package:custom_widgets/wallet_cards/wallet_cards_view.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -51,6 +52,14 @@ class HomeView extends StatelessWidget {
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute<void>(
                 builder: (context) => const WeightTrackerView(),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            child: const Text('Wallet Cards'),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (context) => const WalletCardsView(),
               ),
             ),
           ),
